@@ -50,9 +50,8 @@ Customers add menu items to a persisted local cart, enter their name and mobile 
 
 ## Deploy
 
-Build the project with `npm run build` and deploy the generated `dist/` directory to Vercel, Netlify, or Cloudflare Pages. Configure `VITE_WHATSAPP_NUMBER` as a build-time environment variable in the hosting dashboard. Configure SPA rewrites so `/checkout` and `/order-success` serve `index.html`:
+Build the project with `npm run build` and deploy the generated `dist/` directory to Vercel, Netlify, or Cloudflare Pages. Configure `VITE_WHATSAPP_NUMBER` as a build-time environment variable in the hosting dashboard. The checked-in `vercel.json` configures Vercel's SPA rewrite so `/checkout` and `/order-success` serve the app:
 
-- **Vercel:** add a rewrite from `/(.*)` to `/`.
 - **Netlify:** add `/* /index.html 200` in a `_redirects` file in the published directory.
 - **Cloudflare Pages:** use the SPA fallback behavior (or add a `_redirects` file containing `/* /index.html 200`).
 
