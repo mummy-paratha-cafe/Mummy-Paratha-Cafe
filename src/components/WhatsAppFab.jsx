@@ -6,7 +6,7 @@ export default function WhatsAppFab() {
   const number = (rawNumber || '').toString().trim().replace(/[^0-9]/g, '')
 
   const openChat = () => {
-    if (!number || number.length < 10) {
+    if (!number || number.length <= 10) {
       toast.error('WhatsApp contact is not configured yet.')
       return
     }
